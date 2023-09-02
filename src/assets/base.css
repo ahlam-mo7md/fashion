@@ -1,0 +1,216 @@
+:root {
+  --white: #fff;
+  --primary-base: #172e3d;
+  --primary-dark: #11222d;
+  --primary-light: rgba(23, 46, 61, 0.3);
+  --primary-lighter: rgba(23, 46, 61, 0.08);
+  --secondary-base: rgba(183, 126, 32, 0.99);
+  --gray-light: rgba(255, 255, 255, 0.75);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.btn-navigation {
+  background: #f3f5f5;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-navigation:hover {
+  background: var(--secondary-base);
+}
+
+@media screen and (max-width: 576px) {
+  .btn-navigation {
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+  }
+}
+
+/* swiper navigation */
+.swiper-rtl .swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  background: #f3f5f5;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-rtl .swiper-button-prev {
+  right: 0;
+}
+
+.swiper-rtl .swiper-button-next {
+  left: 0;
+}
+
+.swiper-rtl .swiper-button-next:hover,
+.swiper-rtl .swiper-button-prev:hover {
+  background: var(--secondary-base);
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: var(--primary-base);
+  font-size: 20px !important;
+  font-weight: bolder;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-button-prev:hover:after,
+.swiper-button-next:hover:after {
+  color: #f3f5f5;
+}
+
+@media screen and (max-width: 576px) {
+  .swiper-rtl .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+  }
+}
+
+svg,
+svg path {
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-navigation:hover svg path {
+  stroke: white !important;
+}
+
+.btn-navigation:hover svg {
+  transform: scale(1.2);
+}
+
+.social svg {
+  fill: transparent;
+}
+
+.social:hover svg {
+  transform: scale(1.2);
+  fill: var(--secondary-base);
+}
+
+.social:hover rect {
+  stroke: var(--secondary-base);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* OTP */
+
+.otp-input {
+  border-radius: 6px !important;
+  padding: 0.75rem 0.75rem !important;
+  width: 100%;
+  text-align: center;
+}
+
+.otp-input::placeholder {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.otp-input + span {
+  display: none;
+}
+
+.otp-input:focus {
+  border-color: var(--primary-light);
+  outline: 0;
+  box-shadow: none;
+}
+
+.otp-inputs > div {
+  width: 100%;
+  gap: 1rem;
+  justify-content: space-between !important;
+}
+
+@media screen and (max-width: 576px) {
+  .otp-inputs > div {
+    gap: 0.5rem;
+  }
+}
+
+/* Background colour of an input field with value */
+.otp-input.is-complete {
+  background-color: var(--primary-lighter);
+}
+
+.auth-card {
+  width: 40%;
+  border: 0;
+
+  margin: auto;
+
+  @media screen and (max-width: 992px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.navs-tabs a.router-link-exact-active .nav-link {
+  > svg g,
+  svg path,
+  svg circle {
+    opacity: 1;
+    stroke-opacity: 1;
+  }
+
+  > span {
+    color: var(--primary-base);
+  }
+}
+
+.navs-tabs .nav-link {
+  > span {
+    color: rgba(23, 46, 61, 0.65);
+  }
+
+  &:hover {
+    > svg g,
+    svg path,
+    svg circle {
+      /* stroke: var(--primary-base); */
+      opacity: 1;
+      stroke-opacity: 1;
+    }
+
+    > span {
+      color: var(--primary-base);
+    }
+  }
+}
+
+/* Button */
+.setting {
+  @media screen and (max-width: 992px) {
+    .btn.btn-sm[data-v-3c9d0845] {
+      width: fit-content;
+    }
+  }
+}
